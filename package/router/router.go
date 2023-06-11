@@ -23,7 +23,7 @@ func InitRouter(db *gorm.DB) {
 	//TODO я передаю хэндлер а он пидер(((
 	v1 := router.Group("/api/v1")
 	{
-		v1.GET("/login", controllers.GetAllUsers())
+		v1.GET("/login", controllers.GetAllUsers(db))
 		v1.GET("/logout")
 		v1.GET("/register")
 		v1.GET("/forgot")
