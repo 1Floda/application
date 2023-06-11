@@ -18,7 +18,7 @@ func InitRouter() {
 		web.GET("/register")
 		web.GET("/forgot")
 	}
-
+	//TODO я передаю хэндлер а он пидер(((
 	v1 := router.Group("/api/v1")
 	{
 		v1.GET("/login", controllers.GetAllUsers())
