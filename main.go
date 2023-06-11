@@ -18,6 +18,6 @@ func main() {
 
 	db.AutoMigrate(&models.User{})
 
-	router.InitRouter()
+	router.InitRouter(db)
 	router.Serve("localhost:8888")
 }

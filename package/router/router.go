@@ -1,13 +1,15 @@
 package router
 
 import (
-	"application/package/controllers"
 	"github.com/gin-gonic/gin"
+	"gorm.io/gorm"
+
+	"application/package/controllers"
 )
 
 var router *gin.Engine
 
-func InitRouter() {
+func InitRouter(db *gorm.DB) {
 	router = gin.Default()
 
 	web := router.Group("/")
